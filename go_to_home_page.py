@@ -19,7 +19,7 @@ class GotoHomePage(unittest.TestCase):
         time.sleep(3)
         self.driver.quit()
 
-    def test_go_to_home_page(self):
+    def test_check_home_page_url(self):
         current_url = self.driver.current_url
         self.assertEqual(current_url, bp.BASE_URL)
 
