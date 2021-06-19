@@ -39,3 +39,78 @@ JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691:
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1624128144729	geckodriver	INFO	Listening on 127.0.0.1:51546
+1624128147770	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofileKyXfsS"
+1624128148081	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128149757	Marionette	INFO	Listening on port 51554
+1624128149794	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128157166	Marionette	INFO	Stopped listening on port 51554
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1624128157680	geckodriver	INFO	Listening on 127.0.0.1:61945
+1624128160735	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofileqY18hz"
+1624128161026	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128162666	Marionette	INFO	Listening on port 61954
+1624128162762	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128166814	Marionette	INFO	Stopped listening on port 61954
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1624128276635	geckodriver	INFO	Listening on 127.0.0.1:59630
+1624128279687	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofileeCAGfT"
+1624128280036	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128281641	Marionette	INFO	Listening on port 59638
+1624128281711	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128287944	Marionette	INFO	Stopped listening on port 59638
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1624128288503	geckodriver	INFO	Listening on 127.0.0.1:59690
+1624128291552	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofile8AiSUy"
+1624128291844	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128293460	Marionette	INFO	Listening on port 59698
+1624128293574	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128297616	Marionette	INFO	Stopped listening on port 59698
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1624128532443	geckodriver	INFO	Listening on 127.0.0.1:50385
+1624128535491	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofile4P11kT"
+1624128535794	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128537641	Marionette	INFO	Listening on port 50396
+1624128538130	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128543665	Marionette	INFO	Stopped listening on port 50396
+1624128544138	geckodriver	INFO	Listening on 127.0.0.1:50456
+1624128547198	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofileEBsfOa"
+1624128547522	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128549280	Marionette	INFO	Listening on port 50465
+1624128549329	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128553387	Marionette	INFO	Stopped listening on port 50465
+1624128617780	geckodriver	INFO	Listening on 127.0.0.1:52136
+1624128620806	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofileIBmBJn"
+1624128621117	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128622720	Marionette	INFO	Listening on port 52144
+1624128622825	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128628528	Marionette	INFO	Stopped listening on port 52144
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1624128628988	geckodriver	INFO	Listening on 127.0.0.1:52192
+1624128632044	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofileeueAgV"
+1624128632335	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1624128633909	Marionette	INFO	Listening on port 52202
+1624128634067	Marionette	WARN	TLS certificate errors will be ignored for this session
+1624128638188	Marionette	INFO	Stopped listening on port 52202
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
