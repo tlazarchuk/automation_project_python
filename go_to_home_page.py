@@ -28,5 +28,17 @@ class GotoHomePage(unittest.TestCase):
         current_url = self.driver.current_url
         self.assertEqual(current_url, bp.BASE_URL)
 
+    def test_check_custom_login_button(self):
+        self.home_page.click_on_custom_login_button()
+        self.base_page.wait_for_url(bp.CUSTOMER_URL)
+        current_url = self.driver.current_url
+        self.assertEqual(current_url, bp.CUSTOMER_URL)
+
+    def test_check_bank_manager_login_button(self):
+        self.home_page.click_on_bank_manager_login_button()
+        self.base_page.wait_for_url(bp.MANAGER_URL)
+        current_url = self.driver.current_url
+        self.assertEqual(current_url, bp.MANAGER_URL)
+
 if __name__ == "__main__":
   unittest.main()

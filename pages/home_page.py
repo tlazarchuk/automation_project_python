@@ -4,20 +4,9 @@ from pages import base_page
 from pages.base_page import BasePage
 
 """Xpaths for the home page"""
-HOME_BUTTON_XPATH = "//body/div[1]/div/div[1]/button[1]"
-# PROFILE_ICON_XPATH = '//body/div/header/div/div/div/button'
-# LOG_OUT_BUTTON_XPATH = '//body/div[2]/div[2]/ul/li'
-# SIGN_IN_BUTTON_XPATH = '//body/div/header/div/div/div/a[1]'
-# SIGN_UP_BUTTON_XPATH = '//body/div/header/div/div/div/a[2]/span[1]'
-# EASY_REST_BUTTON_XPATH = '//header/div/a'
-# MODERATOR_PANEL_XPATH = '//body/div[2]/div[2]/ul/a[@href="/moderator"]'
-# ADMIN_PANEL_XPATH = '//body/div[2]/div[2]/ul/a[@href="/admin"]'
-# ADMINISTRATOR_PANEL_XPATH = '//body/div[2]/div[2]/ul/a[@href="/administrator-panel"]'
-# WAITER_PANEL_XPATH = '//body/div[2]/div[2]/ul/a[@href="/waiter"]'
-# MY_PROFILE_BUTTON_XPATH = '//body/div[2]/div[2]/ul/a[@href="/profile/personal_info"]'
-# MY_RESTAURANTS_BUTTON_XPATH = '//body/div[2]/div[2]/ul/a[@href="/profile/restaurants"]'
-# RESTAURANTS_LIST_BUTTON_XPATH = '//header/div/nav/a[2]/span'
-# VIEW_ALL_BUTTON_XPATH = '//*[@id="root"]/main/div/div/div[1]/a/img'
+HOME_BUTTON_XPATH = '//body/div[1]/div/div[1]/button[1]'
+CUSTOM_LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/div[1]/button'
+BANK_MANAGER_LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/div[2]/button'
 
 """Class for the Home page with methods which using for testing"""
 
@@ -31,3 +20,8 @@ class HomePage(BasePage):
     def click_on_home_button(self):
         self.click_on_element_by_xpath(HOME_BUTTON_XPATH)
 
+    def click_on_custom_login_button(self):
+        self.click_on_element_by_xpath(CUSTOM_LOGIN_BUTTON_XPATH)
+
+    def click_on_bank_manager_login_button(self):
+        self.click_on_element_by_xpath(BANK_MANAGER_LOGIN_BUTTON_XPATH)

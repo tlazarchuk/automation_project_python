@@ -7,6 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 """URLs used when testing log-in functionality"""
 BASE_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login')
+CUSTOMER_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/customer')
+MANAGER_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager')
 # LOGIN_PAGE_URL = '{}/log-in'.format(BASE_URL)
 # RESTAURANT_LIST_URL = '{}/restaurants'.format(BASE_URL)
 # MODERATOR_PANEL_URL = '{}/moderator'.format(BASE_URL)
