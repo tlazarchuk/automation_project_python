@@ -5,7 +5,7 @@ from selenium import webdriver
 from pages import base_page as bp
 from pages import home_page as hp
 
-class HOmePageTests(unittest.TestCase):
+class HomePageTests(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
