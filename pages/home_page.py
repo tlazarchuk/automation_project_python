@@ -27,5 +27,11 @@ class HomePage(BasePage):
         """Method for redirecting on the home page"""
         self.driver.get(base_page.BASE_URL)
 
+    def click_on_home_button(self):
+        self.click_on_element_by_xpath(HOME_BUTTON_XPATH)
 
+    def click_on_custom_login_button(self):
+        self.click_on_element_by_xpath(CUSTOM_LOGIN_BUTTON_XPATH)
 
+    def click_on_bank_manager_login_button(self):
+        self.click_on_element_by_xpath(BANK_MANAGER_LOGIN_BUTTON_XPATH)
