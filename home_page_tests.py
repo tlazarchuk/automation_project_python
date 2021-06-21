@@ -1,5 +1,4 @@
 import unittest
-import time
 
 from selenium import webdriver
 
@@ -16,7 +15,6 @@ class GotoHomePage(unittest.TestCase):
         self.driver.implicitly_wait(30)
 
     def tearDown(self):
-        time.sleep(3)
         self.driver.quit()
 
     def test_check_home_page_url(self):
@@ -39,6 +37,10 @@ class GotoHomePage(unittest.TestCase):
         self.base_page.wait_for_url(bp.MANAGER_URL)
         current_url = self.driver.current_url
         self.assertEqual(current_url, bp.MANAGER_URL)
+
+    def test_check_name_of_the_bank(self):
+        name_of_the_bank = self.home_page.get_name_of_the_bank()
+        self.assertEqual(name_of_the_bank, hp.NAME_OF_THE_BANK)
 
 if __name__ == "__main__":
   unittest.main()
