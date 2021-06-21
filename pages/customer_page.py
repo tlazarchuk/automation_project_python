@@ -4,15 +4,12 @@ from pages import base_page
 from pages.base_page import BasePage
 
 """Xpaths for the home page"""
-HOME_BUTTON_XPATH = '//body/div[1]/div/div[1]/button[1]'
-CUSTOM_LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/div[1]/button'
-BANK_MANAGER_LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/div[2]/button'
-NAME_OF_THE_BANK_XPATH = '/html/body/div[1]/div/div[1]/strong'
+LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/form/button'
 
 """Class for the Home page with methods which using for testing"""
 NAME_OF_THE_BANK = 'XYZ Bank'
 
-class HomePage(BasePage):
+class CustomerPage(BasePage):
 
     def go_to_home_page(self):
         """Method for redirecting on the home page"""
@@ -33,8 +30,12 @@ class HomePage(BasePage):
     def get_title(self):
         return self.driver.title
 
-    def click_on_custom_login_button(self):
-        self.click_on_element_by_xpath(CUSTOM_LOGIN_BUTTON_XPATH)
+    def pick_germiona_accaount(self):
+        self.click_on_element_by_xpath('//*[@id="userSelect"]/option[2]')
 
-    def click_on_bank_manager_login_button(self):
-        self.click_on_element_by_xpath(BANK_MANAGER_LOGIN_BUTTON_XPATH)
+    def exist_login_button(self):
+        try:
+            self.find_element_by_xpath(LOGIN_BUTTON_XPATH)
+            return True
+        except:
+            return False
