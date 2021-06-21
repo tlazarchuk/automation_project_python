@@ -5,7 +5,7 @@ from selenium import webdriver
 from pages import base_page as bp
 from pages import home_page as hp
 
-class GotoHomePage(unittest.TestCase):
+class HOmePageTests(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -41,6 +41,10 @@ class GotoHomePage(unittest.TestCase):
     def test_check_name_of_the_bank(self):
         name_of_the_bank = self.home_page.get_name_of_the_bank()
         self.assertEqual(name_of_the_bank, hp.NAME_OF_THE_BANK)
+
+    def test_check_title(self):
+        title = self.home_page.get_title()
+        self.assertEqual(title, hp.NAME_OF_THE_BANK)
 
 if __name__ == "__main__":
   unittest.main()
