@@ -19,12 +19,12 @@ class HomePageTests(unittest.TestCase):
 
     def test_check_home_page_url(self):
         current_url = self.driver.current_url
-        self.assertEqual(current_url, bp.BASE_URL)
+        self.assertEqual(current_url, bp.LOGIN_URL)
 
     def test_check_home_button(self):
         self.home_page.click_on_home_button()
         current_url = self.driver.current_url
-        self.assertEqual(current_url, bp.BASE_URL)
+        self.assertEqual(current_url, bp.LOGIN_URL)
 
     def test_check_custom_login_button(self):
         self.home_page.click_on_custom_login_button()

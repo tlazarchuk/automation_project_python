@@ -6,21 +6,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 """URLs used when testing log-in functionality"""
-BASE_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login')
-CUSTOMER_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/customer')
-MANAGER_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#/manager')
-# LOGIN_PAGE_URL = '{}/log-in'.format(BASE_URL)
-# RESTAURANT_LIST_URL = '{}/restaurants'.format(BASE_URL)
-# MODERATOR_PANEL_URL = '{}/moderator'.format(BASE_URL)
-# ADMIN_PANEL_URL = '{}/admin'.format(BASE_URL)
-# ADMINISTRATOR_PANEL_URL = '{}/administrator-panel'.format(BASE_URL)
-# WAITER_PANEL_URL = '{}waiter/orders'.format(BASE_URL)
-# SIGNUP_PAGE_URL = '{}/sign-up'.format(BASE_URL)
-# MODERATOR_RESTAURANTS_URL = '{}/moderator/restaurants'.format(BASE_URL)
-# MODERATOR_USERS_URL = '{}/moderator/users'.format(BASE_URL)
-# MODERATOR_OWNERS_URL = '{}/moderator/owners'.format(BASE_URL)
-# OWNER_MY_RESTAURANTS_URL = '{}/profile/restaurants'.format(BASE_URL)
-# PROFILE_PAGE_URL = '{}/profile'.format(BASE_URL)
+BASE_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protractor/BankingProject/#')
+LOGIN_URL = '{}/login'.format(BASE_URL)
+CUSTOMER_URL = '{}/customer'.format(BASE_URL)
+MANAGER_URL = '{}/manager'.format(BASE_URL)
 
 """Base Page, parent class for other pages"""
 
