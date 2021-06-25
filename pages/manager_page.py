@@ -35,3 +35,29 @@ class ManagerPage(BasePage):
 
     def click_on_create_customer_button(self):
         self.click_on_element_by_xpath(CREATE_CUSTOMER_XPATH)
+
+    def create_customer_with_filds(self, first_name, last_name, post_code):
+        self.fill_first_name_for_test(first_name)
+        self.fill_last_name_for_test(last_name)
+        self.fill_post_code_for_test(post_code)
+
+    def get_response_from_popup(self):
+        alert = self.driver.switch_to.alert
+        text = alert.text
+        return text[0:27]
+
+    def if_user_created(self):
+        try:
+            text =  self.get_response_from_popup()
+            if(self.correctness_response_from_popup(text)):
+                return True
+            else:
+                return False
+        except:
+            return False
+
+    def correctness_response_from_popup(self, text):
+        if(text == 'Customer added successfully'):
+            return True
+        else:
+            return False
