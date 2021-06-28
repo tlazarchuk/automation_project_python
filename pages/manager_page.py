@@ -47,7 +47,7 @@ class ManagerPage(BasePage):
         alert = self.driver.switch_to.alert
         alert.accept()
 
-    def get_response_from_popu(self):
+    def get_response_from_popup(self):
         alert = self.driver.switch_to.alert
         text = alert.text
         return text[0:27]
