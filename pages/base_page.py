@@ -10,6 +10,9 @@ BASE_URL = os.getenv('TEST_BASE_URL', 'https://www.globalsqa.com/angularJs-protr
 LOGIN_URL = '{}/login'.format(BASE_URL)
 CUSTOMER_URL = '{}/customer'.format(BASE_URL)
 MANAGER_URL = '{}/manager'.format(BASE_URL)
+ADD_CUSTOMER_URL = '{}/manager/addCust'.format(BASE_URL)
+OPEN_ACCOUNT_URL = '{}/manager/openAccount'.format(BASE_URL)
+CUSTOMERS_URL = '{}/manager/list'.format(BASE_URL)
 
 """Base Page, parent class for other pages"""
 

@@ -10,6 +10,8 @@ FIRST_NAME_XPATH = '/html/body/div[1]/div/div[2]/div/div[2]/div/div/form/div[1]/
 LAST_NAME_XPATH = '//body/div[1]/div/div[2]/div/div[2]/div/div/form/div[2]/input'
 POST_CODE_XPATH = '//body/div[1]/div/div[2]/div/div[2]/div/div/form/div[3]/input'
 CREATE_CUSTOMER_XPATH = '//body/div[1]/div/div[2]/div/div[2]/div/div/form/button'
+SEARCH_CUSTOMER_XPATH = '//body/div/div/div[2]/div/div[2]/div/form/div/div/input'
+BUTTON_DELETE_WHEN_SEARCH_XPATH = '//body/div/div/div[2]/div/div[2]/div/div/table/tbody/tr/td[5]/button'
 
 """Class for the Manager page with methods which using for testing"""
 
@@ -41,6 +43,10 @@ class ManagerPage(BasePage):
         self.fill_last_name_for_test(last_name)
         self.fill_post_code_for_test(post_code)
 
+    def accept_popup(self):
+        alert = self.driver.switch_to.alert
+        alert.accept()
+
     def get_response_from_popup(self):
         alert = self.driver.switch_to.alert
         text = alert.text
@@ -61,3 +67,20 @@ class ManagerPage(BasePage):
             return True
         else:
             return False
+
+    def fill_search_input_using_name(self, name):
+        self.fill_in_text_field_by_xpath(SEARCH_CUSTOMER_XPATH, name)
+
+    def delete_customer_when_search(self):
+        self.click_on_element_by_xpath(BUTTON_DELETE_WHEN_SEARCH_XPATH)
+
+    def if_customer_exist(self, name):
+        self.fill_search_input_using_name(name)
+        try:
+            self.click_on_element_by_xpath(BUTTON_DELETE_WHEN_SEARCH_XPATH)
+            return True
+        except:
+            return False
+
+    def clear_search_input(self):
+        self.driver.find_element_by_xpath(SEARCH_CUSTOMER_XPATH).clear()

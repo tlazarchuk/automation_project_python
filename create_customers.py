@@ -7,7 +7,7 @@ from pages import home_page as hp
 from pages import customer_page as cp
 from pages import manager_page as mp
 
-class HOmePageTests(unittest.TestCase):
+class CreateCustomersTests(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
