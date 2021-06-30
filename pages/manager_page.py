@@ -1,7 +1,5 @@
-from selenium.common.exceptions import TimeoutException
-
-from pages import base_page
 from pages.base_page import BasePage
+from pages.home_page import HomePage
 
 ADD_CUSTOMERS_BUTTON_XPATH = '//body/div/div/div[2]/div/div[1]/button[1]'
 OPEN_ACCAOUNT_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/button[2]'
@@ -12,6 +10,11 @@ POST_CODE_XPATH = '//body/div[1]/div/div[2]/div/div[2]/div/div/form/div[3]/input
 CREATE_CUSTOMER_XPATH = '//body/div[1]/div/div[2]/div/div[2]/div/div/form/button'
 SEARCH_CUSTOMER_XPATH = '//body/div/div/div[2]/div/div[2]/div/form/div/div/input'
 BUTTON_DELETE_WHEN_SEARCH_XPATH = '//body/div/div/div[2]/div/div[2]/div/div/table/tbody/tr/td[5]/button'
+PROGRESS_OPEN_ACCOUNT_XPATH = '//body/div/div/div[2]/div/div[2]/div/div/form/button'
+USER_SELECT_XPATH = '//*[@id="userSelect"]/option[text()="Alberto Del Rio"]'
+CURRENCY_POUND_XPATH = '//*[@id="currency"]/option[text()="Pound"]'
+ACCOUNT_NUMBER = ''
+
 
 """Class for the Manager page with methods which using for testing"""
 
@@ -83,4 +86,21 @@ class ManagerPage(BasePage):
             return False
 
     def clear_search_input(self):
-        self.driver.find_element_by_xpath(SEARCH_CUSTOMER_XPATH).clear()
+        self.find_element_by_xpath(SEARCH_CUSTOMER_XPATH).clear()
+
+    def create_test_customer(self):
+        """Creating customer with test data"""
+        self.click_on_add_customer_button()
+        self.create_customer_with_filds('Alberto', 'Del Rio', 'E800000')
+        self.click_on_create_customer_button()
+        self.accept_popup()
+
+    def select_customer_in_list(self):
+        self.click_on_element_by_xpath(USER_SELECT_XPATH)
+        self.click_on_element_by_xpath(CURRENCY_POUND_XPATH)
+        self.click_on_element_by_xpath(PROGRESS_OPEN_ACCOUNT_XPATH)
+
+    def get_response_from_popup_account_number(self):
+        alert = self.driver.switch_to.alert
+        text = alert.text
+        return text[-4:]

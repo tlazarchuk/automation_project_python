@@ -38,3 +38,8 @@ class HomePage(BasePage):
 
     def click_on_bank_manager_login_button(self):
         self.click_on_element_by_xpath(BANK_MANAGER_LOGIN_BUTTON_XPATH)
+
+    def go_to_add_customer(self):
+        self.go_to_home_page()
+        self.driver.implicitly_wait(30)
+        self.click_on_bank_manager_login_button()

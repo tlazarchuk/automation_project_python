@@ -27,3 +27,9 @@ class CustomerPage(BasePage):
             return True
         except:
             return False
+
+    def pick_test_account(self):
+        self.click_on_element_by_xpath('//*[@id="userSelect"]/option[text()="Alberto Del Rio"]')
+
+    def click_on_login_button(self):
+        self.click_on_element_by_xpath(LOGIN_BUTTON_XPATH)

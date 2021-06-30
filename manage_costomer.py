@@ -1,5 +1,4 @@
 import unittest
-import time
 
 from selenium import webdriver
 
@@ -18,18 +17,11 @@ class ManageCustomerTests(unittest.TestCase):
         self.manager_page = mp.ManagerPage(self.driver)
         self.home_page.go_to_home_page()
         self.driver.implicitly_wait(30)
-        self.create_test_customer()
+        self.home_page.click_on_bank_manager_login_button()
+        self.manager_page.create_test_customer()
 
     def tearDown(self):
         self.driver.quit()
-
-    def create_test_customer(self):
-        """Creating customer with test data"""
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
-        self.manager_page.create_customer_with_filds('Alberto', 'Del Rio', 'E800000')
-        self.manager_page.click_on_create_customer_button()
-        self.manager_page.accept_popup()
 
     def test_delete_customer(self):
         self.manager_page.click_on_customers_button()

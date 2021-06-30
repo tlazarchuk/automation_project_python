@@ -17,61 +17,49 @@ class CreateCustomersTests(unittest.TestCase):
         self.manager_page = mp.ManagerPage(self.driver)
         self.home_page.go_to_home_page()
         self.driver.implicitly_wait(30)
+        self.home_page.click_on_bank_manager_login_button()
+        self.manager_page.click_on_add_customer_button()
 
     def tearDown(self):
         self.driver.quit()
 
     def test_add_correct_customer(self):
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
         self.manager_page.create_customer_with_filds('Alberto', 'Del Rio', 'E800000')
         self.manager_page.click_on_create_customer_button()
         boolean = self.manager_page.if_user_created()
         self.assertTrue(boolean)
 
     def test_add_customer_without_name(self):
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
         self.manager_page.create_customer_with_filds('', 'Del Rio', 'E80000')
         self.manager_page.click_on_create_customer_button()
         boolean = self.manager_page.if_user_created()
         self.assertTrue(boolean)
 
     def test_add_customer_without_lastname(self):
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
         self.manager_page.create_customer_with_filds('Albearto', '', 'E80000')
         self.manager_page.click_on_create_customer_button()
         boolean = self.manager_page.if_user_created()
         self.assertTrue(boolean)
 
     def test_add_customer_without_postcode(self):
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
         self.manager_page.create_customer_with_filds('Albearto', 'Del Rio', '')
         self.manager_page.click_on_create_customer_button()
         boolean = self.manager_page.if_user_created()
         self.assertTrue(boolean)
 
     def test_add_customer_with_invalid_name(self):
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
         self.manager_page.create_customer_with_filds('!@#$%^%', 'Del Rio', 'E100000')
         self.manager_page.click_on_create_customer_button()
         boolean = self.manager_page.if_user_created()
         self.assertFalse(boolean)
 
     def test_add_customer_with_invalid_lastname(self):
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
         self.manager_page.create_customer_with_filds('Alberto', '!@@###$$%', 'E100000')
         self.manager_page.click_on_create_customer_button()
         boolean = self.manager_page.if_user_created()
         self.assertFalse(boolean)
 
     def test_add_customer_with_invalid_Postcode(self):
-        self.home_page.click_on_bank_manager_login_button()
-        self.manager_page.click_on_add_customer_button()
         self.manager_page.create_customer_with_filds('Alberto', 'Del Rio', '!@#$%^')
         self.manager_page.click_on_create_customer_button()
         boolean = self.manager_page.if_user_created()
