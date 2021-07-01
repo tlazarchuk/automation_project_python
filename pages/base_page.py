@@ -13,6 +13,7 @@ MANAGER_URL = '{}/manager'.format(BASE_URL)
 ADD_CUSTOMER_URL = '{}/manager/addCust'.format(BASE_URL)
 OPEN_ACCOUNT_URL = '{}/manager/openAccount'.format(BASE_URL)
 CUSTOMERS_URL = '{}/manager/list'.format(BASE_URL)
+TRANSACTION_URL = '{}/listTx'.format(BASE_URL)
 
 """Base Page, parent class for other pages"""
 
