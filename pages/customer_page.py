@@ -6,13 +6,14 @@ from pages.base_page import BasePage
 LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/form/button'
 LIST_OF_CUSTOMER_XPATH = '//body/div[1]/div/div[2]/div/form/div/select'
 NAME_OF_THE_BANK = 'XYZ Bank'
+GERMIONA_IN_LIST_XPATH = '//*[@id="userSelect"]/option[2]'
 
 """Class for the Customer page with methods which using for testing"""
 
 class CustomerPage(BasePage):
 
-    def pick_germiona_accaount(self):
-        self.click_on_element_by_xpath('//*[@id="userSelect"]/option[2]')
+    def pick_germiona_account(self):
+        self.click_on_element_by_xpath(GERMIONA_IN_LIST_XPATH)
 
     def exist_login_button(self):
         try:
