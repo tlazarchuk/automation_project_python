@@ -1,5 +1,3 @@
-from selenium.common.exceptions import TimeoutException
-
 from pages import base_page
 from pages.base_page import BasePage
 
