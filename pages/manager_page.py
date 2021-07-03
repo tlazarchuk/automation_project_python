@@ -1,5 +1,4 @@
 from pages.base_page import BasePage
-from pages.home_page import HomePage
 
 ADD_CUSTOMERS_BUTTON_XPATH = '//body/div/div/div[2]/div/div[1]/button[1]'
 OPEN_ACCAOUNT_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/button[2]'

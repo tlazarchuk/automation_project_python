@@ -2,7 +2,6 @@ import unittest
 
 from selenium import webdriver
 
-from pages import base_page as bp
 from pages import home_page as hp
 from pages import customer_page as cp
 from pages import manager_page as mp
@@ -13,7 +12,6 @@ class CorrectnessUrlManagerTests(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.home_page = hp.HomePage(self.driver)
-        self.base_page = bp.BasePage(self.driver)
         self.customer_page = cp.CustomerPage(self.driver)
         self.manager_page = mp.ManagerPage(self.driver)
         self.account_page = ap.AccountPage(self.driver)

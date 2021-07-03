@@ -1,6 +1,3 @@
-from selenium.common.exceptions import TimeoutException
-
-from pages import base_page
 from pages.base_page import BasePage
 
 LOGOUT_BUTTON_XPATH = '//body/div[1]/div/div[1]/button[2]'
@@ -14,6 +11,7 @@ DEPOSIT_BUTTON_XPATH = '//body/div/div/div[2]/div/div[3]/button[2]'
 WITHDRAWL_BUTTON_XPATH = '//body/div/div/div[2]/div/div[3]/button[3]'
 INPUT_DEPOSIT_OR_WITHDRAWL_XPATH = '//body/div/div/div[2]/div/div[4]/div/form/div/input'
 CONFIRM_DEPOSIT_OR_WITHDRAWL_BUTTON_XPATH = '//body/div/div/div[2]/div/div[4]/div/form/button'
+INPUT_ACCOUNT_NUMBER_1002_XPATH = '//*[@id="accountSelect"]/option[text()="1002"]'
 
 """Class for the Account page with methods which using for testing"""
 
@@ -61,3 +59,6 @@ class AccountPage(BasePage):
 
     def click_on_confirm_button(self):
         self.click_on_element_by_xpath(CONFIRM_DEPOSIT_OR_WITHDRAWL_BUTTON_XPATH)
+
+    def click_on_account_number_1002(self):
+        self.click_on_element_by_xpath(INPUT_ACCOUNT_NUMBER_1002_XPATH)

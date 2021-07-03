@@ -1,6 +1,3 @@
-from selenium.common.exceptions import TimeoutException
-
-from pages import base_page
 from pages.base_page import BasePage
 
 LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/form/button'
