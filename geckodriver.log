@@ -4053,6 +4053,7 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+<<<<<<< HEAD
 1625386945605	geckodriver	INFO	Listening on 127.0.0.1:50637
 1625386948651	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\NOVAYA~1\\AppData\\Local\\Temp\\rust_mozprofile22llKK"
 1625386949628	Marionette	INFO	Marionette enabled
@@ -4125,3 +4126,5 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't fin
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+=======
+>>>>>>> development
