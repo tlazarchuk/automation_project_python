@@ -1,5 +1,4 @@
 import unittest
-import time
 
 from selenium import webdriver
 
@@ -103,7 +102,7 @@ class CorrectnessUrlManagerTests(unittest.TestCase):
         self.account_page.click_on_confirm_button()
         self.account_page.click_on_transaction_button()
         transaction_type = self.transaction_page.get_second_in_list_transaction_type()
-        self.assertEqual(transaction_type, 'Dedit')
+        self.assertEqual(transaction_type, 'Debit')
 
     def test_reset_button(self):
         self.account_page.click_on_transaction_button()

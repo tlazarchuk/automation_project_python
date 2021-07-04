@@ -23,7 +23,6 @@ class BasePage(object):
 
     def __init__(self, driver):
         self.driver = driver
-        # self.wait = WebDriverWait(self.driver, 10)        # default
         self.wait = WebDriverWait(self.driver, 20)
 
     def find_element_by_xpath(self, element_xpath):
