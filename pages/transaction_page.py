@@ -13,10 +13,16 @@ class TransactionPage(BasePage):
         self.click_on_element_by_xpath(BACK_BUTTON_XPATH)
 
     def get_first_in_list_transaction_type(self):
-        return self.find_element_by_xpath(FIRST_IN_LIST_TRANSACTION_TYPE_XPATH_XPATH).text 
+        try:
+            return self.find_element_by_xpath(FIRST_IN_LIST_TRANSACTION_TYPE_XPATH_XPATH).text
+        except:
+            return False 
 
     def get_second_in_list_transaction_type(self):
-        return self.find_element_by_xpath(SECOND_IN_LIST_TRANSACTION_TYPE_XPATH).text
+        try:
+            return self.find_element_by_xpath(SECOND_IN_LIST_TRANSACTION_TYPE_XPATH).text
+        except:
+            return False
 
     def click_on_reset_button(self):
         self.click_on_element_by_xpath(RESET_BUTTON_XPATH)
