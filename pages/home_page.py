@@ -1,14 +1,14 @@
 from pages import base_page
 from pages.base_page import BasePage
 
-"""Xpaths for the home page"""
 HOME_BUTTON_XPATH = '//body/div[1]/div/div[1]/button[1]'
 CUSTOM_LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/div[1]/button'
 BANK_MANAGER_LOGIN_BUTTON_XPATH = '//body/div[1]/div/div[2]/div/div[1]/div[2]/button'
 NAME_OF_THE_BANK_XPATH = '/html/body/div[1]/div/div[1]/strong'
+NAME_OF_THE_BANK = 'XYZ Bank'
 
 """Class for the Home page with methods which using for testing"""
-NAME_OF_THE_BANK = 'XYZ Bank'
+
 
 class HomePage(BasePage):
 

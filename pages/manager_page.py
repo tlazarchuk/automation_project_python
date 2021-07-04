@@ -12,7 +12,7 @@ BUTTON_DELETE_WHEN_SEARCH_XPATH = '//body/div/div/div[2]/div/div[2]/div/div/tabl
 PROGRESS_OPEN_ACCOUNT_XPATH = '//body/div/div/div[2]/div/div[2]/div/div/form/button'
 USER_SELECT_XPATH = '//*[@id="userSelect"]/option[text()="Alberto Del Rio"]'
 CURRENCY_POUND_XPATH = '//*[@id="currency"]/option[text()="Pound"]'
-ACCOUNT_NUMBER = ''
+CUSTOMER_ADDED_SUCCESSFULLY_TEXT = 'Customer added successfully'
 
 
 """Class for the Manager page with methods which using for testing"""
@@ -65,7 +65,7 @@ class ManagerPage(BasePage):
             return False
 
     def correctness_response_from_popup(self, text):
-        if(text == 'Customer added successfully'):
+        if(text == CUSTOMER_ADDED_SUCCESSFULLY_TEXT):
             return True
         else:
             return False
